@@ -11,6 +11,8 @@
 // @grant        GM_setValue
 // @grant        GM_getValue
 // @grant        GM_setClipboard
+// @updateURL    https://personpersopers.github.io/script.user.js
+// @downloadURL  https://personpersopers.github.io/script.user.js
 // ==/UserScript==
 
 /*eslint-disable no-redeclare*/
