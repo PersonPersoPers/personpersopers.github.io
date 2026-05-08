@@ -6,13 +6,9 @@ setInterval(() => {
         }, Math.floor(Math.random() * 100))
     }, Math.floor(Math.random() * 1000))
 }, 1000)
-window.onerror = function(msg, url, line) {
-    alert("Error: " + msg + "\nLine: " + line);
-};
 var selector = document.querySelector(".test-select");
-(async function(){try{var response = await fetch("https://cool-frog-03dd.gavin-li2.workers.dev/")
+(async function(){var response = await fetch("https://cool-frog-03dd.gavin-li2.workers.dev/")
 var tests = await response.json()
-alert(tests)
 var prompt = document.querySelector(".prompt")
 var input = document.querySelector(".input")
 var submit = document.querySelector(".submit")
@@ -53,4 +49,4 @@ submit.onclick = () => {
         prompt.innerText = q.prompt
         correctAnswers = q.answers
     }
-}}catch(e){alert(e.stack)}})()
+}})()
