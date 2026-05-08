@@ -9,8 +9,8 @@ setInterval(() => {
 var selector = document.querySelector(".test-select")
 var response = undefined
 var tests = undefined
-(aysnc function(){response = await fetch("https://cool-frog-03dd.gavin-li2.workers.dev/")
-tests = await response.json()})()
+(async function(){response = await fetch("https://cool-frog-03dd.gavin-li2.workers.dev/")
+tests = await response.json()
 var prompt = document.querySelector(".prompt")
 var input = document.querySelector(".input")
 var submit = document.querySelector(".submit")
@@ -51,4 +51,4 @@ submit.onclick = () => {
         prompt.innerText = q.prompt
         correctAnswers = q.answers
     }
-}
+}})()
