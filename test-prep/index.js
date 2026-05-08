@@ -1,1 +1,53 @@
-try{var _0x3ea479=_0x5f34;function _0x1a52(){var _0x3ca604=['floor','.q-cont','80Xgwnik','.input','value','161326cQPAtT','option[value=\x22\x22]','length','prompt','answers','<option\x20value=\x22','json','.overlay','172MFURqz','5649246hPjOFa','880505miOsRV','includes','</option>','8umLeYV','random','block','https://cool-frog-03dd.gavin-li2.workers.dev/','.submit','52834eXTmko','querySelector','23025sGlwif','animation','style','display','remove','1043pkygSj','name','500ms\x20linear\x200s\x20overlay-wrong','onchange','57072lcDhFR','5525091uNbeoi','innerText','questions','none'];_0x1a52=function(){return _0x3ca604;};return _0x1a52();}(function(_0x2ab796,_0x344ad4){var _0x5a5a39=_0x5f34,_0x3eff0a=_0x2ab796();while(!![]){try{var _0x3b3f9f=parseInt(_0x5a5a39(0x16b))/0x1*(parseInt(_0x5a5a39(0x166))/0x2)+-parseInt(_0x5a5a39(0x16d))/0x3*(parseInt(_0x5a5a39(0x161))/0x4)+parseInt(_0x5a5a39(0x163))/0x5+-parseInt(_0x5a5a39(0x162))/0x6+parseInt(_0x5a5a39(0x14b))/0x7*(parseInt(_0x5a5a39(0x14f))/0x8)+parseInt(_0x5a5a39(0x150))/0x9+parseInt(_0x5a5a39(0x156))/0xa*(parseInt(_0x5a5a39(0x159))/0xb);if(_0x3b3f9f===_0x344ad4)break;else _0x3eff0a['push'](_0x3eff0a['shift']());}catch(_0x29b710){_0x3eff0a['push'](_0x3eff0a['shift']());}}}(_0x1a52,0xde2f0),setInterval(()=>{var _0x455319=_0x5f34;setTimeout(()=>{var _0x4afbba=_0x5f34;document['querySelector']('.caption')[_0x4afbba(0x151)]='adi\x20is\x20a\x20bitch\x20ass\x20fucking\x20gay\x20nigga',setTimeout(()=>{var _0x4f729b=_0x4afbba;document[_0x4f729b(0x16c)]('.caption')[_0x4f729b(0x151)]='adi\x20is\x20gay';},Math[_0x4afbba(0x154)](Math['random']()*0x64));},Math['floor'](Math[_0x455319(0x167)]()*0x3e8));},0x3e8));function _0x5f34(_0x21e5a5,_0x53a71d){_0x21e5a5=_0x21e5a5-0x14a;var _0x1a52e4=_0x1a52();var _0x5f34ba=_0x1a52e4[_0x21e5a5];return _0x5f34ba;}var selector=document[_0x3ea479(0x16c)]('.test-select'),response=await fetch(_0x3ea479(0x169)),tests=await response[_0x3ea479(0x15f)](),prompt=document[_0x3ea479(0x16c)]('.prompt'),input=document[_0x3ea479(0x16c)](_0x3ea479(0x157)),submit=document[_0x3ea479(0x16c)](_0x3ea479(0x16a)),overlay=document[_0x3ea479(0x16c)](_0x3ea479(0x160)),correctAnswers=[''];for(var i in tests){var t=tests[i];selector['innerHTML']+=_0x3ea479(0x15e)+i+'\x22>'+t[_0x3ea479(0x14c)]+_0x3ea479(0x165);}selector[_0x3ea479(0x14e)]=()=>{var _0x5e4a9d=_0x3ea479;if(selector[_0x5e4a9d(0x158)]!=''){document[_0x5e4a9d(0x16c)](_0x5e4a9d(0x15a))[_0x5e4a9d(0x14a)](),document[_0x5e4a9d(0x16c)](_0x5e4a9d(0x155))[_0x5e4a9d(0x16f)][_0x5e4a9d(0x170)]=_0x5e4a9d(0x168);var _0x5c35b1=tests[selector[_0x5e4a9d(0x158)]][_0x5e4a9d(0x152)],_0x12e5cf=_0x5c35b1[Math['floor'](Math[_0x5e4a9d(0x167)]()*_0x5c35b1[_0x5e4a9d(0x15b)])];prompt[_0x5e4a9d(0x151)]=_0x12e5cf[_0x5e4a9d(0x15c)],correctAnswers=_0x12e5cf[_0x5e4a9d(0x15d)];}},submit['onclick']=()=>{var _0x56b629=_0x3ea479;if(correctAnswers[_0x56b629(0x164)](input[_0x56b629(0x158)])){overlay[_0x56b629(0x16f)]['animation']='500ms\x20linear\x200s\x20overlay-correct',setTimeout(()=>{var _0x123e5f=_0x56b629;overlay[_0x123e5f(0x16f)][_0x123e5f(0x16e)]=_0x123e5f(0x153);},0x1f4);var _0x351b00=tests[selector[_0x56b629(0x158)]]['questions'],_0x1a8bad=_0x351b00[Math['floor'](Math[_0x56b629(0x167)]()*_0x351b00['length'])];prompt[_0x56b629(0x151)]=_0x1a8bad[_0x56b629(0x15c)],correctAnswers=_0x1a8bad['answers'];}else{overlay[_0x56b629(0x16f)][_0x56b629(0x16e)]=_0x56b629(0x14d),setTimeout(()=>{var _0x347673=_0x56b629;overlay['style'][_0x347673(0x16e)]=_0x347673(0x153);},0x1f4);var _0x351b00=tests[selector[_0x56b629(0x158)]][_0x56b629(0x152)],_0x1a8bad=_0x351b00[Math[_0x56b629(0x154)](Math[_0x56b629(0x167)]()*_0x351b00[_0x56b629(0x15b)])];prompt[_0x56b629(0x151)]=_0x1a8bad[_0x56b629(0x15c)],correctAnswers=_0x1a8bad['answers'];}};}catch(e){alert(e.stack)}
+setInterval(() => {
+    setTimeout(() => {
+        document.querySelector(".caption").innerText = "adi is a bitch ass fucking gay nigga"
+        setTimeout(() => {
+            document.querySelector(".caption").innerText = "adi is gay"
+        }, Math.floor(Math.random() * 100))
+    }, Math.floor(Math.random() * 1000))
+}, 1000)
+var selector = document.querySelector(".test-select")
+var response = await fetch("https://cool-frog-03dd.gavin-li2.workers.dev/")
+var tests = await response.json()
+alert(tests)
+var prompt = document.querySelector(".prompt")
+var input = document.querySelector(".input")
+var submit = document.querySelector(".submit")
+var overlay = document.querySelector(".overlay")
+var correctAnswers = [""]
+for(var i in tests){
+    var t = tests[i]
+    selector.innerHTML += `<option value="${i}">${t.name}</option>`
+}
+selector.onchange = () => {
+    if(selector.value != ""){
+        document.querySelector("option[value=\"\"]").remove()
+        document.querySelector(".q-cont").style.display = "block"
+        var questions = tests[selector.value].questions
+        var q = questions[Math.floor(Math.random() * questions.length)]
+        prompt.innerText = q.prompt
+        correctAnswers = q.answers
+    }
+}
+submit.onclick = () => {
+    if(correctAnswers.includes(input.value)){
+        overlay.style.animation = "500ms linear 0s overlay-correct"
+        setTimeout(() => {
+            overlay.style.animation = "none"
+        }, 500)
+        var questions = tests[selector.value].questions
+        var q = questions[Math.floor(Math.random() * questions.length)]
+        prompt.innerText = q.prompt
+        correctAnswers = q.answers
+    }
+    else{
+        overlay.style.animation = "500ms linear 0s overlay-wrong"
+        setTimeout(() => {
+            overlay.style.animation = "none"
+        }, 500)
+        var questions = tests[selector.value].questions
+        var q = questions[Math.floor(Math.random() * questions.length)]
+        prompt.innerText = q.prompt
+        correctAnswers = q.answers
+    }
+}
