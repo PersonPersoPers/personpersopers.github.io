@@ -9,6 +9,7 @@ setInterval(() => {
 var selector = document.querySelector(".test-select")
 (async function(){var response = await fetch("https://cool-frog-03dd.gavin-li2.workers.dev/")
 var tests = await response.json()
+alert(tests)
 var prompt = document.querySelector(".prompt")
 var input = document.querySelector(".input")
 var submit = document.querySelector(".submit")
