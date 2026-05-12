@@ -18,8 +18,9 @@ for(var i in tests){
     var t = tests[i]
     selector.innerHTML += `<option value="${i}">${t.name}</option>`
 }
+selector.innerHTML += `<option value="create-new">Create New...</option>`
 selector.onchange = () => {
-    if(selector.value != ""){
+    if(selector.value != "" && selector.value != "create-new"){
         document.querySelector("option[value=\"\"]").remove()
         document.querySelector(".q-cont").style.display = "block"
         var questions = tests[selector.value].questions
@@ -27,26 +28,17 @@ selector.onchange = () => {
         prompt.innerText = q.prompt
         correctAnswers = q.answers
     }
+    else if(selector.value == "create-new"){
+        location.href = "new.html"
+    }
 }
 submit.onclick = () => {
-    if(correctAnswers.includes(input.value)){
-        overlay.style.animation = "500ms linear 0s overlay-correct"
-        setTimeout(() => {
-            overlay.style.animation = "none"
-        }, 500)
-        var questions = tests[selector.value].questions
-        var q = questions[Math.floor(Math.random() * questions.length)]
-        prompt.innerText = q.prompt
-        correctAnswers = q.answers
-    }
-    else{
-        overlay.style.animation = "500ms linear 0s overlay-wrong"
-        setTimeout(() => {
-            overlay.style.animation = "none"
-        }, 500)
-        var questions = tests[selector.value].questions
-        var q = questions[Math.floor(Math.random() * questions.length)]
-        prompt.innerText = q.prompt
-        correctAnswers = q.answers
-    }
+    overlay.style.animation = "500ms linear 0s " + (correctAnswers.includes(input.value) : "overlay-correct" ? "overlay-wrong")
+    setTimeout(() => {
+        overlay.style.animation = "none"
+    }, 500)
+    var questions = tests[selector.value].questions
+    var q = questions[Math.floor(Math.random() * questions.length)]
+    prompt.innerText = q.prompt
+    correctAnswers = q.answers
 }})()
