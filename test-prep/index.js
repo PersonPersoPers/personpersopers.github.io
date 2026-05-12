@@ -32,7 +32,7 @@ var selector = document.querySelector(".test-select");
             correctAnswers = q.answers
         }
         else if(selector.value == "create-new"){
-            location.href = "new.html"
+            document.querySelector("c-cont").style.display = "block"
         }
     }
     submit.onclick = () => {
