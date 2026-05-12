@@ -7,6 +7,7 @@ setInterval(() => {
     }, Math.floor(Math.random() * 1000))
 }, 1000)
 var selector = document.querySelector(".test-select");
+var curTest = {"name": "", "questions": []}
 (async function(){
     var response = await fetch("https://cool-frog-03dd.gavin-li2.workers.dev/")
     var tests = await response.json()
@@ -32,7 +33,7 @@ var selector = document.querySelector(".test-select");
             correctAnswers = q.answers
         }
         else if(selector.value == "create-new"){
-            document.querySelector("c-cont").style.display = "block"
+            document.querySelector(".c-cont").style.display = "block"
         }
     }
     submit.onclick = () => {
