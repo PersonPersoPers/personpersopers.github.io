@@ -6,9 +6,9 @@ setInterval(() => {
         }, Math.floor(Math.random() * 100))
     }, Math.floor(Math.random() * 1000))
 }, 1000)
-var selector = document.querySelector(".test-select");
+var selector = document.querySelector(".test-select")
 var curTest = {"name": "", "questions": []}
-(async function(){
+;(async function(){
     var response = await fetch("https://cool-frog-03dd.gavin-li2.workers.dev/")
     var tests = await response.json()
     var prompt = document.querySelector(".prompt")
