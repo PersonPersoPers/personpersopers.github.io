@@ -46,6 +46,53 @@ body{
 .q-cont{
     display: none;
 }
+.entry-l{
+    margin-right: 8px;
+}
+.name{
+    margin-bottom: 8px;
+}
+.author{
+    margin-bottom: 16px;
+}
+.c-cont{
+    display: none;
+}
+.qs-cont{
+    width: 256px;
+    height: 128px;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    overflow: scroll;
+    padding-bottom: 64px;
+}
+.qs-bar{
+    width: 256px;
+    height: 32px;
+    background-color: #808080;
+    border-bottom: 2px solid #000000
+}
+.q-add{
+    font-size: 20px;
+    height: 30px;
+    width: 30px;
+    margin: 1px;
+}
+.q{
+    width: 256px;
+    background-color: #bbbbbb;
+    border-bottom: 2px solid #000000
+}
+.prompt{
+    width: 240px;
+    margin: 4px;
+    height: 28px;
+}
+.answers{
+    width: 240px;
+    margin: 4px;
+    height: 28px;
+}
 @keyframes overlay-correct{
     from{background-color: #00ff00aa}
     to{background-color: #00ff0000}
