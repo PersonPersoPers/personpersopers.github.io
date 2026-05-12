@@ -14,12 +14,12 @@ var input = document.querySelector(".input")
 var submit = document.querySelector(".submit")
 var overlay = document.querySelector(".overlay")
 var correctAnswers = [""]
-if(tests){
+try{if(tests){
     for(var i in tests){
         var t = tests[i]
         selector.innerHTML += `<option value="${i}">${t.name}</option>`
     }
-}
+}}catch(e){alert(e.stack)}
 selector.innerHTML += `<option value="create-new">Create New...</option>`
 alert(selector.innerHTML)
 selector.onchange = () => {
