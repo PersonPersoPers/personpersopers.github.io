@@ -21,6 +21,7 @@ if(tests){
     }
 }
 selector.innerHTML += `<option value="create-new">Create New...</option>`
+alert(selector.innerHTML)
 selector.onchange = () => {
     if(selector.value != "" && selector.value != "create-new"){
         document.querySelector("option[value=\"\"]").remove()
