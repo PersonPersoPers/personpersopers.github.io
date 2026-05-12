@@ -27,12 +27,14 @@ var curTest = {"name": "", "questions": []}
         if(selector.value != "" && selector.value != "create-new"){
             document.querySelector("option[value=\"\"]").remove()
             document.querySelector(".q-cont").style.display = "block"
+            document.querySelector(".c-cont").style.display = "none"
             var questions = tests[selector.value].questions
             var q = questions[Math.floor(Math.random() * questions.length)]
             prompt.innerText = q.prompt
             correctAnswers = q.answers
         }
         else if(selector.value == "create-new"){
+            document.querySelector("option[value=\"\"]").remove()
             document.querySelector(".c-cont").style.display = "block"
         }
     }
