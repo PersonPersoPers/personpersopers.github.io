@@ -15,6 +15,7 @@ var curTest = {"name": "", "questions": []}
     var input = document.querySelector(".input")
     var submit = document.querySelector(".submit")
     var overlay = document.querySelector(".overlay")
+    var name = document.querySelector(".name")
     var correctAnswers = [""]
     if(tests){
         for(var i in tests){
@@ -36,6 +37,7 @@ var curTest = {"name": "", "questions": []}
         else if(selector.value == "create-new"){
             document.querySelector("option[value=\"\"]").remove()
             document.querySelector(".c-cont").style.display = "block"
+            curTest = {"name": "", "questions": []}
         }
     }
     submit.onclick = () => {
@@ -47,5 +49,8 @@ var curTest = {"name": "", "questions": []}
         var q = questions[Math.floor(Math.random() * questions.length)]
         prompt.innerText = q.prompt
         correctAnswers = q.answers
+    }
+    name.onchange = () => {
+        curTest.name = name.value
     }
 })()
