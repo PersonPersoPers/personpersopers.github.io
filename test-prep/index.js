@@ -14,9 +14,11 @@ var input = document.querySelector(".input")
 var submit = document.querySelector(".submit")
 var overlay = document.querySelector(".overlay")
 var correctAnswers = [""]
-for(var i in tests){
-    var t = tests[i]
-    selector.innerHTML += `<option value="${i}">${t.name}</option>`
+if(tests){
+    for(var i in tests){
+        var t = tests[i]
+        selector.innerHTML += `<option value="${i}">${t.name}</option>`
+    }
 }
 selector.innerHTML += `<option value="create-new">Create New...</option>`
 selector.onchange = () => {
