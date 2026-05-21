@@ -4,42 +4,40 @@
     <title>Word Finder</title>
   </head>
   <body>
-    <div style="display: flex; justify-content: center; margin-top: 32px">
-      <label>Length: </label><input id="length">
-      <label>Required: </label><input id="required">
-      <label>Letters: </label><input id="letters">
-      <button id="submit">Submit</button>
-      <p id="result"></p>
-      <script>
-        try{var length = document.getElementById("length")
-        var required = document.getElementById("required")
-        var letters = document.getElementById("letters")
-        var submit = document.getElementById("submit")
-        var result = document.getElementById("result")
-        var words = ""
-        ;(async function(){
-          var wpromise = await fetch("https://personpersopers.github.io/words.txt")
-          words = await wpromise.text()
-          words = words.toLowerCase().split(/\r?\n/)
-        })()
-        submit.onclick = () => {
-          for(var w of words){
-            var req = required.value.toLowerCase()
-            var ltrs = letters.value.toLowerCase() + req
-            if(w.includes(req) && w.length >= parseInt(length.value)){
-              var valid = true
-              for(var c of w){
-                if(!ltrs.includes(c)){
-                  valid = false
-                }
-              }
-              if(valid){
-                result.innerText += w + ", "
+    <div style="display: flex; justify-content: center; margin-top: 32px"><label>Length: </label><input id="length"></div>
+    <div style="display: flex; justify-content: center; margin-top: 32px"><label>Required: </label><input id="required"></div>
+    <div style="display: flex; justify-content: center; margin-top: 32px"><label>Letters: </label><input id="letters"></div>
+    <div style="display: flex; justify-content: center; margin-top: 32px"><button id="submit">Submit</button></div>
+    <div style="display: flex; justify-content: center; margin-top: 32px"><p id="result"></p></div>
+    <script>
+      try{var length = document.getElementById("length")
+      var required = document.getElementById("required")
+      var letters = document.getElementById("letters")
+      var submit = document.getElementById("submit")
+      var result = document.getElementById("result")
+      var words = ""
+      ;(async function(){
+        var wpromise = await fetch("https://personpersopers.github.io/words.txt")
+        words = await wpromise.text()
+        words = words.toLowerCase().split(/\r?\n/)
+      })()
+      submit.onclick = () => {
+        for(var w of words){
+          var req = required.value.toLowerCase()
+          var ltrs = letters.value.toLowerCase() + req
+          if(w.includes(req) && w.length >= parseInt(length.value)){
+            var valid = true
+            for(var c of w){
+              if(!ltrs.includes(c)){
+                valid = false
               }
             }
+            if(valid){
+              result.innerText += w + ", "
+            }
           }
-        }}catch(e){alert(e.stack)}
-      </script>
-    </div>
+        }
+      }}catch(e){alert(e.stack)}
+    </script>
   </body>
 </html>
