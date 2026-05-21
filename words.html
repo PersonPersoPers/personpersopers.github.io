@@ -20,12 +20,12 @@
         ;(async function(){
           var wpromise = await fetch("https://personpersopers.github.io/words.txt")
           words = await wpromise.text()
+          words = words.toLowerCase().split(/\r?\n/)
         })()
-        words = words.split(/\r?\n/)
         submit.onclick = () => {
           for(var w of words){
-            var req = required.value
-            var ltrs = letters.value
+            var req = required.value.toLowerCase()
+            var ltrs = letters.value.toLowerCase() + req
             if(w.includes(req) && w.length >= parseInt(length.value)){
               var valid = true
               for(var c of w){
