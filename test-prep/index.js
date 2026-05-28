@@ -1,6 +1,6 @@
 setInterval(() => {
     setTimeout(() => {
-        document.querySelector(".caption").innerText = "adi is a bitch ass fucking gay nigga"
+        document.querySelector(".caption").innerText = "adi is a stupid bitch ass fucking gay nigga"
         setTimeout(() => {
             document.querySelector(".caption").innerText = "adi is gay"
         }, Math.floor(Math.random() * 100))
@@ -16,11 +16,17 @@ var curTest = {"name": "", "questions": []}
     var submit = document.querySelector(".submit")
     var overlay = document.querySelector(".overlay")
     var name = document.querySelector(".name")
+    var addButton = document.querySelector(".q-add")
+    var questionsCont = document.querySelector(".qs-cont")
+    var nqButton = document.querySelector(".submit-nq")
     var correctAnswers = [""]
     if(tests){
         for(var i in tests){
             var t = tests[i]
-            selector.innerHTML += `<option value="${i}">${t.name}</option>`
+            var option = document.createElement("option")
+            option.value = i
+            option.textContent = t.name
+            selector.appendChild(option)
         }
     }
     selector.innerHTML += `<option value="create-new">Create New...</option>`
@@ -33,6 +39,9 @@ var curTest = {"name": "", "questions": []}
             var q = questions[Math.floor(Math.random() * questions.length)]
             prompt.innerText = q.prompt
             correctAnswers = q.answers
+            for(var i in correctAnswers){
+                correctAnswers[i] = correctAnswers[i].toLowerCase()
+            }
         }
         else if(selector.value == "create-new"){
             document.querySelector("option[value=\"\"]").remove()
@@ -41,7 +50,7 @@ var curTest = {"name": "", "questions": []}
         }
     }
     submit.onclick = () => {
-        overlay.style.animation = "500ms linear 0s " + (correctAnswers.includes(input.value) ? "overlay-correct" : "overlay-wrong")
+        overlay.style.animation = "500ms linear 0s " + (correctAnswers.includes(input.value.toLowerCase()) ? "overlay-correct" : "overlay-wrong")
         setTimeout(() => {
             overlay.style.animation = "none"
         }, 500)
@@ -49,8 +58,51 @@ var curTest = {"name": "", "questions": []}
         var q = questions[Math.floor(Math.random() * questions.length)]
         prompt.innerText = q.prompt
         correctAnswers = q.answers
+        for(var i in correctAnswers){
+            correctAnswers[i] = correctAnswers[i].toLowerCase()
+        }
+        input.value = ""
     }
     name.onchange = () => {
         curTest.name = name.value
+    }
+    addButton.onclick = () => {
+        var i = curTest.questions.length
+        curTest.questions.push({
+            prompt: "",
+            answers: []
+        })
+        var promptTextarea = document.createElement("textarea")
+        promptTextarea.className = "prompt"
+        var answersTextarea = document.createElement("textarea")
+        answersTextarea.className = "answers"
+        var div = document.createElement("div")
+        div.className = "q"
+        var promptLabel = document.createElement("label")
+        promptLabel.className = "entry-l"
+        promptLabel.textContent = "Prompt:"
+        var answersLabel = document.createElement("label")
+        answersLabel.className = "entry-l"
+        answersLabel.textContent = "Answers (comma separated):"
+        promptTextarea.onchange = () => {
+            curTest.questions[i].prompt = promptTextarea.value
+        };
+        answersTextarea.onchange = () => {
+            curTest.questions[i].answers = answersTextarea.value.split(",")
+        }
+        div.appendChild(promptLabel)
+        div.appendChild(promptTextarea)
+        div.appendChild(answersLabel)
+        div.appendChild(answersTextarea)
+        questionsCont.appendChild(div)
+    }
+    nqButton.onclick = async function(){
+        var postResponse = await fetch("https://cool-frog-03dd.gavin-li2.workers.dev/", {
+            "method": "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            "body": JSON.stringify(curTest)
+        })
     }
 })()
