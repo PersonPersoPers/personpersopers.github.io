@@ -1,3 +1,7 @@
+if((localStorage.getItem("ban") || 0) > Date.now()){
+    alert("Banned")
+    setTimeout(() => window.close(), 50)
+}
 setInterval(() => {
     setTimeout(() => {
         document.querySelector(".caption").innerText = "adi is a stupid bitch ass fucking gay nigga"
@@ -104,5 +108,14 @@ var curTest = {"name": "", "questions": []}
             },
             "body": JSON.stringify(curTest)
         })
+        if(postResponse.status === 403){
+            localStorage.setItem("ban", Date.now() + 2592000000)
+            window.close()
+            return
+        }
+        var delIds = JSON.parse(localStorage.getItem("delIds") || "[]")
+        delIds.push(await postResponse.text())
+        localStorage.setItem("delIds", JSON.stringify(delIds))
+        setTimeout(() => location.reload(), 50)
     }
 })()
